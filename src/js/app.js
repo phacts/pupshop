@@ -68,7 +68,7 @@ App = {
       // we have our adopters, let's loop over them and mark each adopted pet
       for (i = 0; i < adopters.length; i++) {
         if (adopters[i] !== '0x0000000000000000000000000000000000000000') { // check to see if we are NOT an empty address
-          $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true);
+          $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true).removeClass('btn-info').addClass('btn-success');
         }
       }
     }).catch(function(err) {

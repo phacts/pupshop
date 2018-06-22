@@ -18,7 +18,6 @@ contract Adoption {
     return adopters;  
   }
 
-
-
-
+  // Todo:
+  // Add functionality to "unAdopt" a pet.
 }
