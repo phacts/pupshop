@@ -1,0 +1,50 @@
+[
+  {
+    "id": 0,
+    "name": "Frieda",
+    "picture": "images/scottish-terrier.jpeg",
+    "age": 3,
+    "breed": "Scottish Terrier",
+    "location": "Lisco, Alabama"
+  },
+  {
+    "id": 1,
+    "name": "Gina",
+    "picture": "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimages1.fanpop.com%2Fimages%2Fphotos%2F1900000%2FPuppy-3-dogs-1993798-1024-768.jpg&f=1",
+    "age": 1,
+    "breed": "Pupper",
+    "location": "Tooleville, West Virginia"
+  },
+  {
+    "id": 2,
+    "name": "Collins",
+    "picture": "images/french-bulldog.jpeg",
+    "age": 2,
+    "breed": "French Bulldog",
+    "location": "Freeburn, Idaho"
+  },
+  {
+    "id": 3,
+    "name": "Melissa",
+    "picture": "images/boxer.jpeg",
+    "age": 2,
+    "breed": "Boxer",
+    "location": "Camas, Pennsylvania"
+  },
+  {
+    "id": 4,
+    "name": "Latisha",
+    "picture": "images/golden-retriever.jpeg",
+    "age": 3,
+    "breed": "Golden Retriever",
+    "location": "Soudan, Louisiana"
+  },
+  {
+    "id": 5,
+    "name": "Doggo",
+    "picture": "https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.planwallpaper.com%2Fstatic%2Fimages%2Fcute-dog-pup.jpg&f=1",
+    "age": 1,
+    "breed": "Cute Cute",
+    "location": "Jacksonwald, Palau"
+  }
+]
