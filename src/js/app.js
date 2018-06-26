@@ -61,14 +61,17 @@ App = {
   markAdopted: function(adopters, account) {
     var adoptionInstance;
 
+    console.log(adopters, 'these are adopters at start of mark adopted');
+
     App.contracts.Adoption.deployed().then(function(instance) {
       adoptionInstance = instance; // set our instance to a variable scoped outside of this callback
       return adoptionInstance.getAdopters.call(); // read data for FREE
     }).then(function(adopters) {
+      console.log(adopters, 'these are adopters in callback after adopters instance returned');
       // we have our adopters, let's loop over them and mark each adopted pet
       for (i = 0; i < adopters.length; i++) {
         if (adopters[i] !== '0x0000000000000000000000000000000000000000') { // check to see if we are NOT an empty address
-          $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true).removeClass('btn-info').addClass('btn-success');
+          $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true).removeClass('btn-info').removeClass('btn-default').addClass('btn-success');
         }
       }
     }).catch(function(err) {
@@ -91,10 +94,14 @@ App = {
 
       App.contracts.Adoption.deployed().then(function(instance) {
         adoptionInstance = instance;
+        
+        // Eager update to show something in the UI letting us know adoption is underway.
+        $('.panel-pet').eq(petId).find('button').text('Adopting...').attr('disabled', true).removeClass('btn-success').removeClass('btn-info').addClass('btn-default');
 
         // Execute adopt function as transaction from sending account
         return adoptionInstance.adopt(petId, {from: account});
       }).then(function(result) {
+        console.log('result about to call mark adopted', result);
         return App.markAdopted(); // a bit inefficient, as I could just mark the one that was adopted, but this will suffice
       }).catch(function(err) {
         console.log('error message from adopt', err.message);
